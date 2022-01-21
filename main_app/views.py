@@ -1,6 +1,7 @@
+from ast import Delete
 from django.shortcuts import render
 from .models import Widget
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, DeleteView
 
 # Create your views here.
 def widgets_index(request):
@@ -12,3 +13,6 @@ class WidgetCreate(CreateView):
   fields = '__all__'
   success_url = '/'
 
+class WidgetDelete(DeleteView):
+  model = Widget
+  success_url = '/'
