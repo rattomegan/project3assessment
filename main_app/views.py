@@ -1,4 +1,3 @@
-from ast import Delete
 from django.shortcuts import render
 from .models import Widget
 from django.views.generic.edit import CreateView, DeleteView
